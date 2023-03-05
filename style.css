@@ -1,0 +1,14 @@
+#me{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    float: right;
+}
+
+#projects{
+    margin-top: 50px;
+}
+
+#contact{
+    margin-top: 50px;
+}
