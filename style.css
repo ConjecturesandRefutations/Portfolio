@@ -13,9 +13,30 @@
     margin-top: 50px;
 }
 
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
 @media (max-width: 575.98px) {
     .col-sm-12 {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .card-img-top {
+        margin-top: 50px;
+    }
+    .display-4{
+        margin-top: 50px;
+    }
+  }
+
+  @media (max-width: 465px) {
+    .card-img-top {
+        margin-top: 15px;
     }
   }
