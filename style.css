@@ -12,3 +12,10 @@
 #contact{
     margin-top: 50px;
 }
+
+@media (max-width: 575.98px) {
+    .col-sm-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
