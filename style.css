@@ -19,6 +19,11 @@
     z-index: 9999;
 }
 
+#skills{
+    display: flex;
+    flex-direction: row;
+}
+
 @media (max-width: 575.98px) {
     .col-sm-12 {
       flex: 0 0 100%;
