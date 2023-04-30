@@ -45,3 +45,9 @@
         margin-top: 15px;
     }
   }
+
+  @media (max-width: 465px) {
+    #me {
+        margin-top: -50px;
+    }
+  }
