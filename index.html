@@ -1,213 +1,819 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alfie's Portfolio</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
-    <a class="navbar-brand" href="#portfolio" id="portfolioId">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<!DOCTYPE html>
+<html lang="en">
 
-  <!-- Header -->
-  <header class="jumbotron jumbotron-fluid">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfie's Portfolio</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/AlfieLogo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top" class="dark_theme">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
     <div class="container">
-      <img src="./images/profile.jpg" class="card-img-top" alt="Project 1" id="me">
-      <h1 class="display-4">Welcome to My Portfolio!</h1>
-      <p class="lead">I am Alfie Collins - a programmer specialising in web development. I have knowledge of both backend and frontend technologies (specifically the MERN stack).</p>
+
+      <h1 class="h1 logo">
+        <a href="#">Alfie Collins<span>.</span></a>
+      </h1>
+
+      <div class="navbar-actions">
+
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+          <span class="icon"></span>
+        </button>
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link">Home.</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">About.</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="navbar-link">Skills.</a>
+          </li>
+
+          <li>
+            <a href="#portfolio" class="navbar-link">Portfolio.</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact.</a>
+          </li>
+
+        </ul>
+      </nav>
+
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>I'm a full-stack developer with a passion for beautiful and creative webpages. I have aptitude in the following technologies:</p>
-    
-    <ul>
-      <li>HTML/CSS/JavaScript</li>   
-      <li>MongoDB</li>                 
-      <li>Express</li>               
-      <li>React</li>                 
-      <li>Node</li>                     
-      <li>Tailwind/Bootstrap/Materialize CSS</li>
-      <li>Git/GitHub</li>
-      <li>PHP</li>
-      <li>MySQL</li>   
-    </ul>
 
-    <p>I also have experience coding collaboratively, and experience presenting projects to groups.</p>
 
-    <p>Outside of coding, I have a first-class BA and MPhil in philosophy (from York and Cambridge) as well as a Graduate Diploma in Law. In my freetime, I am an avid runner and create and sell abstract artwork.</p>
 
-  </section>
 
-<!-- For Fun -->
-<section id="projects" class="container">
-  <h2 class="mb-4">Just for Fun</h2>
-  <div class="row" id="row">
-    <div class="col-md-4 col-sm-12" id="One">
-      <div class="card">
-        <img src="./images/Snake.png" class="card-img-top" alt="Project 1">
-        <div class="card-body">
-          <h5 class="card-title">Snake!</h5>
-          <p class="card-text">My rendition of the classic Nokia game built using Vanilla JavaScript. Making extensive use of Canvas Animation.</p>
-          <a href="https://snakealfie.netlify.app/" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Snake" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-12" id="Two">
-      <div class="card">
-        <img src="./images/Drink.png" class="card-img-top" alt="Project 2">
-        <div class="card-body">
-          <h5 class="card-title">Drinks Rater</h5>
-          <p class="card-text">A full-stack application built with Node, Express and MongoDB. Log drinks and give them a rating. Fully responsive.</p>
-          <a href="https://drinks-rater.cyclic.app/" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Drinks-Rater" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <main>
+    <article class="container">
 
-<!-- Projects Section -->
-<section id="projects" class="container">
-  <h2 class="mb-4">Ironhack Projects</h2>
-  <div class="row" id="row">
-    <div class="col-md-4 col-sm-12" id="One">
-      <div class="card">
-        <img src="./images/KickOff.png" class="card-img-top" alt="Project 1">
-        <div class="card-body">
-          <h5 class="card-title">Kick-Off!</h5>
-          <p class="card-text">A football-themed Video Game built using Vanilla JavaScript. Making extensive use of Canvas Animation.</p>
-          <a href="https://conjecturesandrefutations.github.io/Kick-Off/" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Kick-Off" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-12" id="Two">
-      <div class="card">
-        <img src="./images/Strive.png" class="card-img-top" alt="Project 2">
-        <div class="card-body">
-          <h5 class="card-title">Strive</h5>
-          <p class="card-text">A full-stack application built with Node, Express and MongoDB. Uses Handlebar pages. Similar to the popular website 'Strava' in which users upload activities for their own personal log and for other users to see. Styled using Tailwind.</p>
-          <a href="https://strive.cyclic.app/" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Strive" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-12" id="Three">
-      <div class="card">
-        <img src="./images/RecipeBook.png" class="card-img-top" alt="Project 3">
-        <div class="card-body">
-          <h5 class="card-title">RecipeBook</h5>
-          <p class="card-text">A full-stack MERN application demonstrating extensive aptitude for both backend and frontend programming. Log recipes, see other users' recipes. Give and receive feedback. Includes a light/dark theme toggle. Fully responsive.</p>
-          <a href="https://guthub.netlify.app/login" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Recipebook-Client" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <!-- 
+        - #HERO
+      -->
 
-<!-- Freelance Section -->
-<section id="freelance" class="container mt-5">
-  <h2 class="mb-4">Freelance Work</h2>
-  <div class="row">
-    <div class="col-md-4 col-sm-12" id="Four">
-      <div class="card">
-        <img src="./images/FourElms.png" class="freeimg card-img-top" alt="Project 4">
-        <div class="card-body">
-          <h5 class="card-title">Four Elms</h5>
-          <p class="card-text">My client required a home-guide for renting out his house. I created him this fully responsive React application styled with Tailwind CSS. It features the ability to toggle between English and Spanish.</p>
-          <a href="https://four-elms.netlify.app" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Four-Elms" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div>
+      <section class="hero" id="home">
 
-    <!-- <div class="col-md-4 col-sm-12" id="Yoga">
-      <div class="card">
-        <img src="./images/Yoga.png" class="freeimg card-img-top" alt="Project 4">
-        <div class="card-body">
-          <h5 class="card-title">Pearl Yoga</h5>
-          <p class="card-text">My client required a website for her yoga services. I created her this fully responsive application styled with Materialize CSS.</p>
-          <a href="https://pearltantra.netlify.app/" class="btn btn-primary" target="_blank">View Website</a>
-          <a href="https://github.com/ConjecturesandRefutations/Pearl-Tantra" class="btn btn-secondary" target="_blank">Source Code</a>
-        </div>
-      </div>
-    </div> -->
-  </div>
-</section>
+        <figure class="hero-banner">
 
-  <!-- Contact Section -->
- <div class="container" id="contact">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="contact-details">
-        <h2>Contact Details</h2>
-        <p>alfiecollins44@hotmail.co.uk</p>
-        <p>07786198856</p>
-        <div class="d-flex flex-column">
-          <a href="https://github.com/ConjecturesandRefutations" target="_blank" class="mb-2">GitHub</a>
-          <a href="https://www.linkedin.com/in/alfie-collins-5b818a131/" target="_blank" class="mb-2">LinkedIn</a>
-          <a href="https://drive.google.com/file/d/1qoLe8wVS7BurTr1Zuhn7TCQvyjCP4qMm/view?usp=sharing" target="_blank">CV</a>
+          <picture class="me">
+            <source srcset="./assets/images/MeWithHeadphones-removebg.png" media="(min-width: 768px)">
+            <source srcset="./assets/images/MeWithHeadphones-removebg.png" media="(min-width: 500px)">
+            <img src="./assets/images/MeWithHeadphones-removebg.png" alt="Alfie in a red shirt"
+              class="w-100">
+          </picture>
+
+        </figure>
+
+        <div class="hero-content">
+
+          <h2 class="h2 hero-title">Full-Stack Web Developer</h2>
+
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+
         </div>
-      </div>
+
+        <ul class="hero-social-list">
+
+          <li>
+            <a href="https://github.com/ConjecturesandRefutations" target="_blank" class="hero-social-link">
+              <ion-icon name="logo-github"></ion-icon>
+
+              <div class="tooltip">GitHub</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/AlfieCo08689647" target="_blank" class="hero-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+
+              <div class="tooltip">Twitter</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/alfie-collins-5b818a131/" target="_blank" class="hero-social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+
+              <div class="tooltip">Linkedin</div>
+            </a>
+          </li>
+
+        </ul>
+
+        <a href="#about" class="scroll-down">Scroll</a>
+
+      </section>
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about" id="about">
+
+        <figure class="about-banner">
+          <img src="./assets/images/valley art.jpg" alt="One of the better pictures of me"
+            class="w-100">
+        </figure>
+
+        <div class="about-content section-content">
+
+          <p class="section-subtitle">About me</p>
+
+          <h2 class="h3 section-title">Creative and Skilled Developer</h2>
+
+          <p class="section-text">
+            I am Alfie Collins - a programmer specialising in web development. 
+            I have knowledge of both backend and frontend technologies.
+            I also have experience coding collaboratively, and experience presenting projects to groups. </br>
+            Outside of coding, I have a first-class BA and MPhil in philosophy (from York and Cambridge) as well as a Graduate Diploma in Law. 
+            In my freetime, I am an avid runner and create and sell artwork (such as this valley painting).
+          </p>
+
+          <div class="btn-group">
+            <a href="https://drive.google.com/file/d/1qoLe8wVS7BurTr1Zuhn7TCQvyjCP4qMm/view?usp=sharing" target="_blank" class="btn btn-primary">View my CV</a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="skills" id="skills">
+
+        <div class="skills-content section-content">
+
+          <p class="section-subtitle">My skills</p>
+
+          <h2 class="h3 section-title">My Skills</h2>
+
+          <p class="section-text">
+            I develop beautiful, creative and functionally robust webpages.
+            I can work equally well on the backend and frontend.
+            Hover over the logos to see each skill.
+          </p>
+
+          <div class="skills-toggle" data-toggle-box>
+            <button class="toggle-btn active" data-toggle-btn>Skills</button>
+
+            <button class="toggle-btn" data-toggle-btn>Tools</button>
+          </div>
+
+        </div>
+
+        <div class="skills-box" data-skills-box>
+
+          <ul class="skills-list">
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">HTML5</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/html5.png" alt="HTML5 logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">CSS3</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/css3.png" alt="CSS3 logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">JavaScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/javascript.png" alt="JavaScript logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">TypeScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/typescript.png" alt="TypeScript logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">React</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/react.png" alt="React logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">MongoDB</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/MongoDB.png" alt="MongoDB logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">ExpressJS</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/express.png" alt="ExpressJS logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">NodeJS</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/node-js-logo.png" alt="Node logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">PHP</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/php.jpeg" alt="PHP logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">MySQL</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/MySQL.png" alt="MySQL logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Bootstrap</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Tailwind</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/tailwindcss-logo.png" alt="Angular logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Materialize</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/Materialize.jpeg" alt="React logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <ul class="tools-list">
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Git</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/git.png" alt="Git logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Npm</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/npm.png" alt="Npm logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Command Line</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/command.png" alt="Command Line logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">VS Code</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/vs-code.png" alt="VS Code logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Trello</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/trello.png" alt="Trello logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Slack</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/slack.png" alt="Slack logo">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skill-card">
+                <div class="tooltip">Microsoft Office</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/office.png" alt="Microsoft Office logo" class="skillset">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECTS
+      -->
+
+      <section class="project" id="portfolio">
+
+        <ul class="project-list">
+
+          <li>
+            <div class="project-content section-content">
+
+              <p class="section-subtitle">My Works</p>
+
+              <h2 class="h3 section-title">See My Awesome Projects!</h2>
+
+              <p class="section-text">
+               A couple of freelance projects, some projects from Ironhack bootcamp and a couple of projects just for fun.
+              </p>
+
+            </div>
+          </li>
+          <li>
+            
+            <a class="project-card" href="https://four-elms.netlify.app" target="_blank">
+
+              <figure class="card-banner">
+                <img src="./assets/images/FourElms.png" class="w-100" alt="Four Elms Website.">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">Four Elms (FREELANCE)</h3>
+
+
+                <p>My client required a home-guide for renting out his house. I created him this fully responsive React application styled with Tailwind CSS. It features the ability to toggle between English and Spanish.</p>
+
+              </div>
+
+            </a>
+          </li>
+
+          
+          <li>
+            
+            <a href="https://pearltantra.netlify.app/" target="_blank" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/Yoga.png" class="w-100" alt="Yoga Pose">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">Jane Yoga (FREELANCE)</h3>
+
+
+                <p>(UNDER CONSTRUCTION - waiting on client's content) My client required a website for her yoga services. I created her this fully responsive full-stack application styled with Materialize CSS. It uses PHP to add and retrieve data from a MySQL database. She is very pleased with the design and functionality.</p>
+
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="https://snakealfie.netlify.app/" target="_blank" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/Snake.png" class="w-100"
+                  alt="A Snake on a red background.">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">Snake!</h3>
+
+
+                <p>My rendition of the classic Nokia game built using Vanilla JavaScript. Making extensive use of Canvas Animation.
+
+ 
+                </p>
+
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="https://strive.cyclic.app/" target="_blank" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/Strive.png" class="w-100"
+                  alt="Blue digital watch on a dark liver background.">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">Strive</h3>
+
+
+                <p>A full-stack application built with Node, Express and MongoDB. Uses Handlebar pages. Similar to the popular website 'Strava' in which users upload activities for their own personal log and for other users to see. Styled using Tailwind.</p>
+
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="https://guthub.netlify.app/" target="_blank" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/RecipeBook.png" class="w-100"
+                  alt="On a dark liver background, Airport luggage car carrying a luggage.">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">RecipeBook</h3>
+
+
+                <p>A full-stack MERN application demonstrating extensive aptitude for both backend and frontend programming. Log recipes, see other users' recipes. Give and receive feedback. Includes a light/dark theme toggle. Fully responsive.</p>
+
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="https://conjecturesandrefutations.github.io/Kick-Off/" target="_blank" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/KickOff.png" class="w-100"
+                  alt="On a yellow background, a digital watch and a glass.">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">Kick-Off!</h3>
+
+
+                <p>A football-themed Video Game built using Vanilla JavaScript. Making extensive use of Canvas Animation.</p>
+
+              </div>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="https://drinks-rater.cyclic.app/" target="_blank" class="project-card">
+
+              <figure class="card-banner">
+                <img src="./assets/images/Drink.png" class="w-100"
+                  alt="A fujifilm instant camera on a dark electric blue background.">
+              </figure>
+
+              <div class="card-content">
+                
+                <h3 class="h4 card-title">Drinks Rater</h3>
+
+
+                <p>A full-stack application built with Node, Express and MongoDB. Log drinks and give them a rating. Fully responsive.</p>
+
+              </div>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="contact" id="contact">
+
+        <div class="contact-content section-content">
+
+          <p class="section-subtitle">Contact</p>
+
+          <h2 class="h3 section-title">Need a Developer? Please Drop a Message</h2>
+
+        </br></br></br>
+
+          <ul class="contact-list">
+
+            <li class="contact-list-item">
+
+              <div class="contact-item-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Address:</h3>
+
+                <address class="contact-info">
+                  Guildford, UK. </br>
+                  *Willing to relocate anywhere in the UK*.
+                </address>
+              </div>
+
+            </li>
+
+            <li class="contact-list-item">
+
+              <div class="contact-item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Phone:</h3>
+
+                <a href="tel:01234567789" class="contact-info">(+44) 778 619 8856</a>
+
+              </div>
+
+            </li>
+
+            <li class="contact-list-item">
+
+              <div class="contact-item-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Email:</h3>
+
+                <a href="mailto:info@jack.com" class="contact-info">alfiecollins44@hotmail.co.uk</a>
+
+              </div>
+
+            </li>
+
+            <li>
+              <ul class="contac-social-list">
+
+                <li>
+                  <a href="https://www.linkedin.com/in/alfie-collins-5b818a131/" target="_blank" class="contact-social-link">
+                    <div class="tooltip">Linkedin</div>
+
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://github.com/ConjecturesandRefutations" target="_blank" class="contact-social-link">
+                    <div class="tooltip">GitHub</div>
+
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://twitter.com/AlfieCo08689647" target="_blank" class="contact-social-link">
+                    <div class="tooltip">Twitter</div>
+
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <form action="https://formsubmit.co/alfiecollins44@hotmail.co.uk" method="POST" class="contact-form">
+
+          <div class="form-wrapper">
+
+            <label for="name" class="form-label">Name</label>
+
+            <div class="input-wrapper">
+
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
+              <ion-icon name="person-circle"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="email" class="form-label">Email</label>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+                class="input-field">
+
+              <ion-icon name="mail"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="phone" class="form-label">Phone</label>
+
+            <div class="input-wrapper">
+
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+
+              <ion-icon name="call"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="message" class="form-label">Message</label>
+
+            <div class="input-wrapper">
+
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+
+              <ion-icon name="chatbubbles"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send</button>
+
+        </form>
+
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="h1 logo">
+        <a href="#">
+         Thanks for reading<span>!</span>
+        </a>
+      </p>
     </div>
-    <div class="col-md-6">
-      <div class="contact-form">
-      <h2>Contact Form</h2>
-      <form action="https://formsubmit.co/alfiecollins44@hotmail.co.uk" method="POST">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-     </div>
-    </div>
-  </div>
-</div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p> Thank you for reading
-    </p>
   </footer>
-  <!-- Bootstrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top title="Go to Top">
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
